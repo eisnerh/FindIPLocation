@@ -5,6 +5,12 @@ from urllib.request import urlopen
 
 # Function to get public IP address
 def get_public_ip():
+    """
+    Obtiene la dirección IP pública del dispositivo.
+
+    Returns:
+        str: La dirección IP pública del dispositivo.
+    """
     response_my_ip = urlopen('https://api.ipify.org?format=json')
     data = json.load(response_my_ip)
     return data['ip']
